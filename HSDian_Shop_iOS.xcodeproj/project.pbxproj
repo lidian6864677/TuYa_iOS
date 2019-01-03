@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		431DDB0BCCBEC54240EBD417 /* Pods_HSDian_Shop_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0366813A80A3D8A54749A7B9 /* Pods_HSDian_Shop_iOS.framework */; };
+		45181DC521DDBB2F006959C9 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 45181DC421DDBB2F006959C9 /* README.md */; };
 		840FBB0E20C185F600E06C6A /* RecruitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840FBB0D20C185F600E06C6A /* RecruitViewController.swift */; };
 		841A88A720AF139600EDCB06 /* DLJobViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841A88A620AF139600EDCB06 /* DLJobViewModel.swift */; };
 		841A88A920AF13DF00EDCB06 /* PendingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841A88A820AF13DF00EDCB06 /* PendingViewModel.swift */; };
@@ -87,6 +88,7 @@
 		0366813A80A3D8A54749A7B9 /* Pods_HSDian_Shop_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HSDian_Shop_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		18C10E126DDE2D596C9B7AD4 /* Pods_HSDian_Shop_iOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HSDian_Shop_iOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BEAEBBC45C880FB222DE8BD /* Pods-HSDian_Shop_iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HSDian_Shop_iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-HSDian_Shop_iOS/Pods-HSDian_Shop_iOS.release.xcconfig"; sourceTree = "<group>"; };
+		45181DC421DDBB2F006959C9 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../TuYa_ios/README.md; sourceTree = "<group>"; };
 		464F0B673067E93345C6D54B /* Pods-HSDian_Shop_iOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HSDian_Shop_iOSTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-HSDian_Shop_iOSTests/Pods-HSDian_Shop_iOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		4A6BF05E7160D1CDC63ED910 /* Pods_HSDian_Shop_iOSUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HSDian_Shop_iOSUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EC382B985E142B048BC913D /* Pods-HSDian_Shop_iOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HSDian_Shop_iOSTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HSDian_Shop_iOSTests/Pods-HSDian_Shop_iOSTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -453,6 +455,7 @@
 		8420B143209B2D7E003990EE = {
 			isa = PBXGroup;
 			children = (
+				45181DC421DDBB2F006959C9 /* README.md */,
 				8420B14E209B2D7E003990EE /* HSDian_Shop_iOS */,
 				8420B163209B2D7E003990EE /* HSDian_Shop_iOSTests */,
 				8420B16E209B2D7E003990EE /* HSDian_Shop_iOSUITests */,
@@ -708,6 +711,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45181DC521DDBB2F006959C9 /* README.md in Resources */,
 				84A3095820B94B4C0020EA8E /* Cities_All.plist in Resources */,
 				84A3095920B94B4C0020EA8E /* Cities_Hot.plist in Resources */,
 				8420B15A209B2D7E003990EE /* LaunchScreen.storyboard in Resources */,
