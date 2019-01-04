@@ -15,6 +15,7 @@ target 'TuYa_iOS' do
         pod 'ObjectMapper'
         pod 'RxCocoa'
         
+        
         # 网络
         pod 'Alamofire'
         pod 'Moya'
@@ -27,7 +28,7 @@ target 'TuYa_iOS' do
         
         # 内存检测 FPS CUP  打包时去掉
         pod 'XLPagerTabStrip'
-        pod 'GDPerformanceView-Swift', '~> 2.0.2'
+        pod 'CocoaDebug', :configurations => ['Debug']
         #  third
 
 end

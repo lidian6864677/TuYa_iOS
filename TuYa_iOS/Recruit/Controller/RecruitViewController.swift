@@ -81,7 +81,7 @@ class RecruitViewController: BaseViewController {
     }
     
     deinit {
-        DLLog("页面被释放了")
+        print("页面被释放了")
     }
 
 }
@@ -95,13 +95,13 @@ extension RecruitViewController {
         
     }
     @objc fileprivate func clickNormalSend(){
-        DLLog("发布普通职位")
+        print("发布普通职位")
         let vc = LDSendRecruitViewController()
         DLGlobalNavigationController .pushViewController(vc, animated: true)
         closeItemBtnClick()
     }
     @objc fileprivate func clickSuperSend(){
-        DLLog("发布高级职位")
+        print("发布高级职位")
         closeItemBtnClick()
     }
     

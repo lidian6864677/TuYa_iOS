@@ -45,7 +45,7 @@ class CitySeletorTableViewCell: UITableViewCell {
         }
     }
     @objc func clickButton(btn:UIButton){
-//        DLLog(btn.titleLabel?.text)
+//        print(btn.titleLabel?.text)
         let selectCity: String = btn.titleLabel?.text ?? ""
 //        NotificationCenter.default.post(name: NSNotification.Name(rawValue: Noti_SelectedCity),)
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: Noti_SelectedCity), object: nil, userInfo: ["selectName":selectCity])

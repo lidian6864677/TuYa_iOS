@@ -11,11 +11,11 @@ import UIKit
 //let BASE_URL_Test = "http://47.104.192.159:8888"
 struct Network {
     #if DEBUG
-    static let Domain = "http://sandboxapi.kdniao.com:8080"
+    static let Domain = "https://api.apiopen.top"
 //    static let RongDomain = "https://rongtest01.36kr.com"
 //    static let RongDomain2 = "https://rongtest02.36kr.com"
     #else
-    static let Domain = "http://sandboxapi.kdniao.com:8080"
+    static let Domain = "https://api.apiopen.top"
 //    static let RongDomain = "https://rong.36kr.com"
 //    static let RongDomain2 = "https://rong.36kr.com"
     #endif
@@ -65,10 +65,19 @@ let isIPhone4_or_less: Bool = DLScreenHeight < 568.0 ? true : false
 
 
 //利用全局函数,自定义log
-func DLLog<T>(_ message: T, file: String = #file, method: String = #function, line: Int = #line) {
-    #if DEBUG
-    print("\((file as NSString).lastPathComponent): [L:\(line)]-\(method):  \(message)")
-    #endif
-}
+//func DLLog<T>(_ message: T, file: String = #file, method: String = #function, line: Int = #line) {
+//    #if DEBUG
+//    print("\((file as NSString).lastPathComponent): [L:\(line)]-\(method):  \(message)")
+//    
+//    #endif
+//}
+//
+//func KRLog(_ msg: String) {
+//    #if DEBUG
+//    LogUtil.log(msg)
+//    #endif
+//}
+
+
 
 

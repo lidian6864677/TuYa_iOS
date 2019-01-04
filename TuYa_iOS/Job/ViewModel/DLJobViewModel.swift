@@ -14,9 +14,14 @@ class DLJobViewModel {
     func getTopImage() -> Observable<[JobTopImageModel]> {
         return GetNetworkJobData.rx.request(.GetHomeTopImage).mapArray(JobTopImageModel.self).asObservable()
     }
-
-    func GetJobList(page:String) -> Observable<[JobModel]> {
-        return GetNetworkJobData.rx.request(.GetJobList(page)).mapArray(JobModel.self).asObservable()
+    
+    func GetSongPoetry(page: String) -> Observable<[VerseModel]> {
+        return GetNetworkJobData.rx.request(.GetSongPoetry(page)).mapArray(VerseModel.self).asObservable()
     }
+    
+    func GetSinglePoetry() -> Observable<VerseModel> {
+        return GetNetworkJobData.rx.request(.GetSinglePoetry).mapObject(VerseModel.self).asObservable()
+    }
+    
     
 }

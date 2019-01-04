@@ -84,7 +84,7 @@ class BaseViewController: UIViewController,UINavigationControllerDelegate, UIGes
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(customView: rightButton)
     }
     @objc func clickRightNavgationItem() {
-        DLLog("   ")
+        print("   ")
     }
     @objc func clickedLeftNavigationItem(){
         if (self.presentingViewController != nil) {

@@ -8,10 +8,7 @@
 
 import UIKit
 import Moya
-import SwiftyJSON
 import RxSwift
-import RxCocoa
-import ObjectMapper
 import MJRefresh
 private let DLJobTableViewCellIdentifier = "DLJobTableViewCell_Identifier"
 class DLJobViewController: BaseViewController, UITableViewDelegate, UITableViewDataSource, CycleViewDelegate {
@@ -19,7 +16,7 @@ class DLJobViewController: BaseViewController, UITableViewDelegate, UITableViewD
     private var page = 1
     let disposeBag = DisposeBag()
     let viewModel  = DLJobViewModel()
-    private lazy var jobModelArray: [JobModel] = []
+    private lazy var jobModelArray: [VerseModel] = []
     private lazy var dataArray:  [JobModel] = []
     private lazy var topImageArray:  [String] = []
     
@@ -43,31 +40,12 @@ class DLJobViewController: BaseViewController, UITableViewDelegate, UITableViewD
     
     // MARK: GetData
     func getData() {
+        viewModel.GetSinglePoetry().subscribe(onNext: { (verse) in
+        }, onError: { (error) in
+            NetworkHomeApi.errorMessage(error: error as! MoyaError)
+        }, onCompleted: nil, onDisposed: nil).disposed(by: disposeBag)
         
-        //        viewModel.GetJobList(page: String(page)).subscribe(onNext: { ( models) in
-        //            self.jobModelArray.append(contentsOf: models)
-        //        }, onError: { (error) in
-        //
-        //        }, onCompleted: {
-        //
-        //        }) {
-        //
-        //        }
-        //        viewModel.GetJobLi
-        
-        
-        
-        viewModel.GetJobList(page: String(page)).subscribe { (jobModel) in
-            print("---------")
-            print(jobModel)
-            print("---------")
-            
-            
-            
-        }.disposed(by: disposeBag)
-        
-        
-        viewModel.GetJobList(page: String(page)).subscribe { (event) in
+        viewModel.GetSongPoetry(page: String(page)).subscribe { (event) in
             switch event{
             case .next(let models):
                 if self.page == 1 {
@@ -75,7 +53,7 @@ class DLJobViewController: BaseViewController, UITableViewDelegate, UITableViewD
                 }
                 
                 if models.count > 0 {
-                    self.jobModelArray.append(contentsOf: models)
+                    self.jobModelArray += models
                 }
                 if self.jobModelArray.count > 0 && self.page == 1{
                     SetFooterRefresh(vc: self, selector: #selector(self.loadMore), tableView: self.tableView)
@@ -203,7 +181,7 @@ extension DLJobViewController {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell:  DLJobTableViewCell = tableView.dequeueReusableCell(withIdentifier: DLJobTableViewCellIdentifier, for: indexPath) as! DLJobTableViewCell
         //        cell.updateJobModel(jobModel: nil)
-        cell.updateJobModel(jobModel: jobModelArray[indexPath.row])
+        cell.updateJobModel(verseModel: jobModelArray[indexPath.row])
         return cell
     }
     

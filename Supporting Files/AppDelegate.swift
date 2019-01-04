@@ -7,25 +7,24 @@
 //
 
 import UIKit
-//import AMapFoundationKit
-
+#if DEBUG
+import CocoaDebug
+#endif
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
   
     
-//    var rootNavigationController: BaseNavgationController {
-//        get
-//        {
-////            root.navigationBar.isHidden = true
-//            return root
-//        }
-//    }
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
+        #if DEBUG
+        CocoaDebug.enable()
+        
 
+        #endif
+        
+        
 //        UIApplication.shared.isStatusBarHidden = false
 //        UIApplication.shared.statusBarStyle = .lightContent
         
@@ -78,3 +77,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
+//normal print
+public func print<T>(file: String = #file, function: String = #function, line: Int = #line, _ message: T, color: UIColor = .white) {
+    #if DEBUG
+    Swift.print("\(Date()) \((file as NSString).lastPathComponent)-\(function) [L:\(line)]:")
+    swiftLog(file, function, line, message, color, true)
+    #endif
+}

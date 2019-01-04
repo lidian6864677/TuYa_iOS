@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4504067921DEF3A50074DA52 /* VerseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4504067821DEF3A50074DA52 /* VerseModel.swift */; };
+		4504067E21DF09230074DA52 /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4504067D21DF09230074DA52 /* BaseModel.swift */; };
 		45181FFE21DDE612006959C9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45181FFD21DDE612006959C9 /* AppDelegate.swift */; };
 		4518200521DDE613006959C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4518200421DDE613006959C9 /* Assets.xcassets */; };
 		4518204D21DDE650006959C9 /* SendRecuitDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4518201121DDE64F006959C9 /* SendRecuitDataManager.swift */; };
@@ -59,7 +61,7 @@
 		4518210C21DDEB66006959C9 /* EnumManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451820F921DDEB66006959C9 /* EnumManager.swift */; };
 		4518210D21DDEB66006959C9 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451820FA21DDEB66006959C9 /* LocationManager.swift */; };
 		4518210E21DDEB66006959C9 /* Prefs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451820FB21DDEB66006959C9 /* Prefs.swift */; };
-		4518210F21DDEB66006959C9 /* DLCommonPublic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451820FD21DDEB66006959C9 /* DLCommonPublic.swift */; };
+		4518210F21DDEB66006959C9 /* DLRefresh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451820FD21DDEB66006959C9 /* DLRefresh.swift */; };
 		4518211021DDEB66006959C9 /* UserInfoBaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451820FF21DDEB66006959C9 /* UserInfoBaseModel.swift */; };
 		458C17F921DE08BC00950FE0 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458C17F821DE08BC00950FE0 /* NetworkManager.swift */; };
 		F85EE68265BF2B6EE27871D4 /* Pods_TuYa_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7D2A1B19B66913FF1B50E4C /* Pods_TuYa_iOS.framework */; };
@@ -67,6 +69,8 @@
 
 /* Begin PBXFileReference section */
 		0F009EE55C66F1C9189DF1E5 /* Pods-TuYa_iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TuYa_iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-TuYa_iOS/Pods-TuYa_iOS.release.xcconfig"; sourceTree = "<group>"; };
+		4504067821DEF3A50074DA52 /* VerseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerseModel.swift; sourceTree = "<group>"; };
+		4504067D21DF09230074DA52 /* BaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
 		45181FFA21DDE612006959C9 /* TuYa_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TuYa_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		45181FFD21DDE612006959C9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4518200421DDE613006959C9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -122,7 +126,7 @@
 		451820F921DDEB66006959C9 /* EnumManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnumManager.swift; sourceTree = "<group>"; };
 		451820FA21DDEB66006959C9 /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		451820FB21DDEB66006959C9 /* Prefs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Prefs.swift; sourceTree = "<group>"; };
-		451820FD21DDEB66006959C9 /* DLCommonPublic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DLCommonPublic.swift; sourceTree = "<group>"; };
+		451820FD21DDEB66006959C9 /* DLRefresh.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DLRefresh.swift; sourceTree = "<group>"; };
 		451820FF21DDEB66006959C9 /* UserInfoBaseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfoBaseModel.swift; sourceTree = "<group>"; };
 		458C17F821DE08BC00950FE0 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		510AF326FBC5D10846653393 /* Pods-TuYa_iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TuYa_iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TuYa_iOS/Pods-TuYa_iOS.debug.xcconfig"; sourceTree = "<group>"; };
@@ -141,10 +145,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4504067B21DF09050074DA52 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				4504067C21DF09130074DA52 /* BaseModel */,
+				451820EC21DDEB66006959C9 /* BaseViewController */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		4504067C21DF09130074DA52 /* BaseModel */ = {
+			isa = PBXGroup;
+			children = (
+				4504067D21DF09230074DA52 /* BaseModel.swift */,
+			);
+			path = BaseModel;
+			sourceTree = "<group>";
+		};
 		45181FF121DDE612006959C9 = {
 			isa = PBXGroup;
 			children = (
 				45181FFC21DDE612006959C9 /* TuYa_iOS */,
+				4518207221DDE679006959C9 /* Supporting Files */,
 				45181FFB21DDE612006959C9 /* Products */,
 				686427ACACF5A2A09A808C44 /* Pods */,
 				8BF2F9368A6AEA1156343339 /* Frameworks */,
@@ -162,14 +184,13 @@
 		45181FFC21DDE612006959C9 /* TuYa_iOS */ = {
 			isa = PBXGroup;
 			children = (
-				451820E821DDEB66006959C9 /* Tool */,
-				4518207221DDE679006959C9 /* Supporting Files */,
 				4518203C21DDE650006959C9 /* Job */,
-				4518201921DDE64F006959C9 /* Lib */,
 				4518203321DDE650006959C9 /* Me */,
 				4518202521DDE64F006959C9 /* Message */,
 				4518202A21DDE64F006959C9 /* Pending */,
 				4518200F21DDE64F006959C9 /* Recruit */,
+				4518201921DDE64F006959C9 /* Lib */,
+				451820E821DDEB66006959C9 /* Tool */,
 			);
 			path = TuYa_iOS;
 			sourceTree = "<group>";
@@ -385,6 +406,7 @@
 			isa = PBXGroup;
 			children = (
 				4518204721DDE650006959C9 /* JobModel.swift */,
+				4504067821DEF3A50074DA52 /* VerseModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -424,8 +446,8 @@
 		451820E821DDEB66006959C9 /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				4504067B21DF09050074DA52 /* Base */,
 				451820E921DDEB66006959C9 /* Network */,
-				451820EC21DDEB66006959C9 /* BaseViewController */,
 				451820F021DDEB66006959C9 /* Extensions */,
 				451820F421DDEB66006959C9 /* Manager */,
 				451820FC21DDEB66006959C9 /* Public */,
@@ -471,8 +493,6 @@
 				451820F521DDEB66006959C9 /* UserManager.swift */,
 				451820F621DDEB66006959C9 /* Client.swift */,
 				451820F721DDEB66006959C9 /* DLUserDefaults.swift */,
-				451820F821DDEB66006959C9 /* GlobalConstants.swift */,
-				451820F921DDEB66006959C9 /* EnumManager.swift */,
 				451820FA21DDEB66006959C9 /* LocationManager.swift */,
 				451820FB21DDEB66006959C9 /* Prefs.swift */,
 			);
@@ -482,7 +502,9 @@
 		451820FC21DDEB66006959C9 /* Public */ = {
 			isa = PBXGroup;
 			children = (
-				451820FD21DDEB66006959C9 /* DLCommonPublic.swift */,
+				451820F821DDEB66006959C9 /* GlobalConstants.swift */,
+				451820F921DDEB66006959C9 /* EnumManager.swift */,
+				451820FD21DDEB66006959C9 /* DLRefresh.swift */,
 			);
 			path = Public;
 			sourceTree = "<group>";
@@ -524,6 +546,7 @@
 				45181FF721DDE612006959C9 /* Frameworks */,
 				45181FF821DDE612006959C9 /* Resources */,
 				162B42A84F87BA756D310E23 /* [CP] Embed Pods Frameworks */,
+				4507521521DF73E2004D13D9 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -546,6 +569,7 @@
 				TargetAttributes = {
 					45181FF921DDE612006959C9 = {
 						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1000;
 					};
 				};
 			};
@@ -591,7 +615,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-TuYa_iOS/Pods-TuYa_iOS-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/GDPerformanceView-Swift/GDPerformanceView_Swift.framework",
+				"${BUILT_PRODUCTS_DIR}/CocoaDebug/CocoaDebug.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
@@ -607,7 +631,7 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GDPerformanceView_Swift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaDebug.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
@@ -624,6 +648,23 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TuYa_iOS/Pods-TuYa_iOS-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		4507521521DF73E2004D13D9 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nexport CocoaDebug_FILENAME=\"CocoaDebug.framework\"\nexport CocoaDebug_PATH=\"${SRCROOT}/${CocoaDebug_FILENAME}\"\n\n[ \"${CONFIGURATION}\" != \"Debug\" ] && exit 0\n\nif [ -d \"${CocoaDebug_PATH}\" ]; then\n\"${CocoaDebug_PATH}/copy_and_codesign.sh\"\nfi\n";
 		};
 		5662F520F2EE25A7681F46EE /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -662,11 +703,12 @@
 				4518206E21DDE650006959C9 /* DLJobTableViewHeaderView.swift in Sources */,
 				4518210621DDEB66006959C9 /* UIView+Extension.swift in Sources */,
 				4518205E21DDE650006959C9 /* DLReviewingViewController.swift in Sources */,
-				4518210F21DDEB66006959C9 /* DLCommonPublic.swift in Sources */,
+				4518210F21DDEB66006959C9 /* DLRefresh.swift in Sources */,
 				4518210721DDEB66006959C9 /* String+ChangePiYinExtension.swift in Sources */,
 				4518210021DDEB66006959C9 /* NetworkUserApi.swift in Sources */,
 				4518210921DDEB66006959C9 /* Client.swift in Sources */,
 				4518206221DDE650006959C9 /* DLMeViewController.swift in Sources */,
+				4504067921DEF3A50074DA52 /* VerseModel.swift in Sources */,
 				4518206B21DDE650006959C9 /* ResultTableViewController.swift in Sources */,
 				4518205A21DDE650006959C9 /* MessageViewModel.swift in Sources */,
 				45181FFE21DDE612006959C9 /* AppDelegate.swift in Sources */,
@@ -691,6 +733,7 @@
 				4518210A21DDEB66006959C9 /* DLUserDefaults.swift in Sources */,
 				4518205B21DDE650006959C9 /* DLMessageViewController.swift in Sources */,
 				4518206121DDE650006959C9 /* MeViewModel.swift in Sources */,
+				4504067E21DF09230074DA52 /* BaseModel.swift in Sources */,
 				4518206921DDE650006959C9 /* CitySelectorViewController.swift in Sources */,
 				4518205521DDE650006959C9 /* CycleCell.swift in Sources */,
 				4518205D21DDE650006959C9 /* PendingViewController.swift in Sources */,
@@ -846,9 +889,10 @@
 			baseConfigurationReference = 510AF326FBC5D10846653393 /* Pods-TuYa_iOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZW4B4H4LG6;
-				INFOPLIST_FILE = "$(SRCROOT)/TuYa_iOS/Supporting Files/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -856,6 +900,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Dian.TuYa.TuYa-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/yuangonmg/Desktop/TuYa_iOS/Supporting Files/PrefixHeader.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -866,9 +912,10 @@
 			baseConfigurationReference = 0F009EE55C66F1C9189DF1E5 /* Pods-TuYa_iOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZW4B4H4LG6;
-				INFOPLIST_FILE = "$(SRCROOT)/TuYa_iOS/Supporting Files/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -876,6 +923,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Dian.TuYa.TuYa-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/yuangonmg/Desktop/TuYa_iOS/Supporting Files/PrefixHeader.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

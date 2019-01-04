@@ -23,7 +23,7 @@ class DLJobTableViewCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     // MARK: update
-    func updateJobModel(jobModel model:JobModel?) {
+    func updateJobModel(verseModel model:VerseModel?) {
         jobName.text = model?.jobName ?? "暴打韩诗雨张双不限时间"
         addressLabel.text = model?.address ?? "上海"
         timeLabel.text = model?.time ?? "5/22 - 5/30"

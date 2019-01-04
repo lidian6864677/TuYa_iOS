@@ -17,11 +17,9 @@ let GetNetworkJobData = MoyaProvider<NetworkHomeApi>()
 /** 下面定义豆瓣FM请求的endpoints（供provider使用）**/
 //请求分类
  enum NetworkHomeApi {
-    case GetHomeTopImage        // 获取首页列表
-    case GetJobList(String)     // 获取首页招聘信息列表
-    case GetChannels            // 获取首页列表
-    case GetJobDetail(String)   // 获取工作详情
-//    case playlist(String) //获取歌曲
+    case GetSongPoetry(String)    ///> 获取宋朝古诗词
+    case GetHomeTopImage
+    case GetSinglePoetry  // 随机诗词
 }
 
 //请求配置
@@ -30,14 +28,12 @@ extension NetworkHomeApi: TargetType {
     ///>  各个请求的具体路径
     public var path: String {
         switch self {
+        case .GetSongPoetry:
+            return "/getSongPoetry"
         case .GetHomeTopImage:
-            return "/url/all"
-        case .GetJobList:
-            return "/kdniaosandbox/gateway/exterfaceInvoke.json"
-        case .GetJobDetail:
-            return "/details/detailsData"
-        case .GetChannels:
-            return "/j/app/radio/channels"
+            return "/getStry"
+        case .GetSinglePoetry:
+            return "/singlePoetry"
         }
     }
     
@@ -49,15 +45,10 @@ extension NetworkHomeApi: TargetType {
     ///>  请求任务事件（这里附带上参数）
     public var task: Task {
         switch self {
-        case .GetJobList(let page):
+        case .GetSongPoetry(let page):
             var params: [String: Any] = [:]
-            params["pageNum"] = page
-            params["pageSize"] = (10)
-            return .requestParameters(parameters: params,
-                                      encoding: URLEncoding.default)
-        case .GetJobDetail(let id):
-            var params: [String: Any] = [:]
-            params["merchant_id"] = id
+            params["page"]  = page
+            params["count"] = (10)
             return .requestParameters(parameters: params,
                                       encoding: URLEncoding.default)
         default:
@@ -90,4 +81,5 @@ extension NetworkHomeApi: TargetType {
     static func errorMessage(error: MoyaError) {
         NetworkManager.manager.errorMessageHandle(error: error)
     }
+    
 }

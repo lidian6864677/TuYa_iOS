@@ -59,24 +59,28 @@ final class NetworkManager {
             //                "timestamp" : timestamp
         ]
     }
-
-   
+    
+    
     
     func errorMessageHandle(error: MoyaError) {
         switch error {
         case .jsonMapping(let res):
-            guard let resString = try? res.mapJSON() as? [String : Any] else {
-                DLLog("\n❌⬇️❌⬇️❌--< 网络请求失败 >--❌⬇️❌⬇️❌\n\n API:\n  \(String(describing: error.response?.request)) \n\n error:\n  \(String(describing:  error.response))\n\n❌⬆️❌⬆️❌--< 网络请求失败 >--❌⬆️❌⬆️❌")
+            guard let resString = try? res.mapJSON() as! [String : Any] else {
+                print("‼️‼️‼️--< 网络请求失败 >--‼️‼️‼️\n\n API:\n  \(String(describing: error.response?.request)) \n\n error:\n  \(String(describing:  error.response))\n\n‼️‼️‼️--< 网络请求失败 >--‼️‼️‼️")
                 return
             }
-            showTost(parametersStr: resString?["message"] as! String)
+            print("⚠️⚠️⚠️API:\n  \(String(describing: error.response?.request)) \n\n ⚠️⚠️⚠️data:\n  \(String(describing: resString) )\n\n")
+            
+            showTost(parametersStr: String(describing: resString["message"]))
         default:
-            DLLog("a")
+            print("------")
         }
     }
     private func showTost(parametersStr: String) {
-        DLLog(parametersStr)
+        print(parametersStr)
     }
+    
+    
     
     class func currentNetReachability() {
         let manager = NetworkReachabilityManager()
@@ -96,7 +100,7 @@ final class NetworkManager {
                 }
                 break
             }
-            DLLog(statusStr as Any)
+            print(statusStr as Any)
         }
         manager?.startListening()
     }

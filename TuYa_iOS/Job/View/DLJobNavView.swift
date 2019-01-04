@@ -99,7 +99,6 @@ class DLJobNavView: UIView {
     // MARK: update
     var offsetY: CGFloat = 0.0 {
         didSet {
-//            DLLog(offsetY)
             let alpha = offsetY / (DLStatusBarHeight + DLnavigationBarHeight)
             topNavView.alpha = alpha
             if alpha <= 0.5 {
@@ -180,7 +179,7 @@ extension DLJobNavView {
     @objc func clickCityBtn() {
         let vc = CitySelectorViewController()
         vc.callback = { (selectName:String) in
-            DLLog(selectName)
+            print(selectName)
             self.cityButton.setTitle(" \(selectName)", for: .normal)
             self.sizeToFitTheButton(button: self.cityButton, image: self.cityButton.imageView?.image, title: self.cityButton.titleLabel?.text ?? "")
         }

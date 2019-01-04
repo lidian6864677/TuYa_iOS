@@ -85,9 +85,9 @@ extension LDSendRecruitViewController: UITableViewDelegate, UITableViewDataSourc
         let model = recuitModelArray[indexPath.section][indexPath.row]
         switch model.optionType {
         case .normal?:
-            DLLog("选择")
+            print("选择")
         case .state?:
-            DLLog("a ")
+            print("a ")
         default: break
         }
     }

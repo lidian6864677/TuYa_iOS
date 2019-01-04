@@ -12,7 +12,6 @@ import Moya
 import SwiftyJSON
 import RxCocoa
 import ObjectMapper
-import GDPerformanceView_Swift
 class Prefs: NSObject {
     let disposeBag = DisposeBag()
     static let share = Prefs()
@@ -38,16 +37,6 @@ class Prefs: NSObject {
                 return
             }
             }.disposed(by: disposeBag)
-    }
-    func SettingGDPerformanceMonitor() {
-//        PerformanceMonitor.shared().start()
-//            { (textLabel) in
-//            textLabel?.backgroundColor = .orange
-//            textLabel?.textColor = .white
-//            textLabel?.layer.borderColor = UIColor.yellow.cgColor
-//        }
-//        PerformanceMonitor.shared().start()
-        
     }
 }
 
