@@ -40,10 +40,40 @@ class DLJobViewController: BaseViewController, UITableViewDelegate, UITableViewD
     
     // MARK: GetData
     func getData() {
-        viewModel.GetSinglePoetry().subscribe(onNext: { (verse) in
-        }, onError: { (error) in
-            NetworkHomeApi.errorMessage(error: error as! MoyaError)
-        }, onCompleted: nil, onDisposed: nil).disposed(by: disposeBag)
+        
+        //        viewModel.GetSinglePoetry().subscribe(onNext: { (verse) in
+        //
+        ////            print(verse)
+        //
+        //        }, onError: { (error) in
+        //            NetworkHomeApi.errorMessage(error: error as! MoyaError)
+        //        }, onCompleted: nil, onDisposed: nil).disposed(by: disposeBag)
+        //
+        //
+        //
+                viewModel.GetRecommendPoetry().subscribe(onNext: { (json) in
+                    let data = json.result
+                    if let data = data{
+                        print(data)
+                        print(data["content"])
+                    }
+                }, onError: { (error) in
+                    NetworkHomeApi.errorMessage(error: error as! MoyaError)
+                }, onCompleted: nil, onDisposed: nil).disposed(by: disposeBag)
+        
+        
+        
+//        viewModel.GetRecommendPoetry(channelName: "public_tuijian_spring").subscribe(onNext: { (model) in
+//            print(model)
+//            print(model.songListModel)
+//            print(model.songListModel!.first?.artist)
+//
+//        }, onError: { (error) in
+//            NetworkHomeApi.errorMessage(error: error as! MoyaError)
+//        }, onCompleted: nil, onDisposed: nil).disposed(by: disposeBag)
+//
+//
+        
         
         viewModel.GetSongPoetry(page: String(page)).subscribe { (event) in
             switch event{

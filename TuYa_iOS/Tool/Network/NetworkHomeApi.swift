@@ -17,9 +17,16 @@ let GetNetworkJobData = MoyaProvider<NetworkHomeApi>()
 /** 下面定义豆瓣FM请求的endpoints（供provider使用）**/
 //请求分类
  enum NetworkHomeApi {
-    case GetSongPoetry(String)    ///> 获取宋朝古诗词
+    /// 获取顶部轮播图 图片
+    case GetSongPoetry(String)
+    ///> 获取宋朝古诗词
     case GetHomeTopImage
+    ///> 随机单句诗词推荐
     case GetSinglePoetry  // 随机诗词
+    ///> 随机一首诗词推荐
+    case GetRecommendPoetry
+    ///> 音乐电台详情接口：
+    case GetMusicBroadcastingDetails(String)
 }
 
 //请求配置
@@ -34,6 +41,10 @@ extension NetworkHomeApi: TargetType {
             return "/getStry"
         case .GetSinglePoetry:
             return "/singlePoetry"
+        case .GetRecommendPoetry:
+            return "/recommendPoetry"
+        case .GetMusicBroadcastingDetails:
+            return "/musicBroadcastingDetails"
         }
     }
     
@@ -51,6 +62,12 @@ extension NetworkHomeApi: TargetType {
             params["count"] = (10)
             return .requestParameters(parameters: params,
                                       encoding: URLEncoding.default)
+        case .GetMusicBroadcastingDetails(let channelName):
+            var params: [String: Any] = [:]
+            params["channelname"]  = channelName
+            return .requestParameters(parameters: params,
+                                      encoding: URLEncoding.default)
+            
         default:
             return .requestPlain
         }

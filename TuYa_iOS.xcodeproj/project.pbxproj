@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4504067921DEF3A50074DA52 /* VerseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4504067821DEF3A50074DA52 /* VerseModel.swift */; };
-		4504067E21DF09230074DA52 /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4504067D21DF09230074DA52 /* BaseModel.swift */; };
+		4504067E21DF09230074DA52 /* JsonDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4504067D21DF09230074DA52 /* JsonDataModel.swift */; };
 		45181FFE21DDE612006959C9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45181FFD21DDE612006959C9 /* AppDelegate.swift */; };
 		4518200521DDE613006959C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4518200421DDE613006959C9 /* Assets.xcassets */; };
 		4518204D21DDE650006959C9 /* SendRecuitDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4518201121DDE64F006959C9 /* SendRecuitDataManager.swift */; };
@@ -63,6 +63,8 @@
 		4518210E21DDEB66006959C9 /* Prefs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451820FB21DDEB66006959C9 /* Prefs.swift */; };
 		4518210F21DDEB66006959C9 /* DLRefresh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451820FD21DDEB66006959C9 /* DLRefresh.swift */; };
 		4518211021DDEB66006959C9 /* UserInfoBaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451820FF21DDEB66006959C9 /* UserInfoBaseModel.swift */; };
+		452096EE21E0F66200B9E115 /* MusicChannelDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452096EC21E0F66200B9E115 /* MusicChannelDetailModel.swift */; };
+		452096EF21E0F66200B9E115 /* SongListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452096ED21E0F66200B9E115 /* SongListModel.swift */; };
 		458C17F921DE08BC00950FE0 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458C17F821DE08BC00950FE0 /* NetworkManager.swift */; };
 		F85EE68265BF2B6EE27871D4 /* Pods_TuYa_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7D2A1B19B66913FF1B50E4C /* Pods_TuYa_iOS.framework */; };
 /* End PBXBuildFile section */
@@ -70,7 +72,7 @@
 /* Begin PBXFileReference section */
 		0F009EE55C66F1C9189DF1E5 /* Pods-TuYa_iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TuYa_iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-TuYa_iOS/Pods-TuYa_iOS.release.xcconfig"; sourceTree = "<group>"; };
 		4504067821DEF3A50074DA52 /* VerseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerseModel.swift; sourceTree = "<group>"; };
-		4504067D21DF09230074DA52 /* BaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
+		4504067D21DF09230074DA52 /* JsonDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonDataModel.swift; sourceTree = "<group>"; };
 		45181FFA21DDE612006959C9 /* TuYa_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TuYa_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		45181FFD21DDE612006959C9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4518200421DDE613006959C9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -128,6 +130,8 @@
 		451820FB21DDEB66006959C9 /* Prefs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Prefs.swift; sourceTree = "<group>"; };
 		451820FD21DDEB66006959C9 /* DLRefresh.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DLRefresh.swift; sourceTree = "<group>"; };
 		451820FF21DDEB66006959C9 /* UserInfoBaseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfoBaseModel.swift; sourceTree = "<group>"; };
+		452096EC21E0F66200B9E115 /* MusicChannelDetailModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicChannelDetailModel.swift; sourceTree = "<group>"; };
+		452096ED21E0F66200B9E115 /* SongListModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongListModel.swift; sourceTree = "<group>"; };
 		458C17F821DE08BC00950FE0 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		510AF326FBC5D10846653393 /* Pods-TuYa_iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TuYa_iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TuYa_iOS/Pods-TuYa_iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		C7D2A1B19B66913FF1B50E4C /* Pods_TuYa_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TuYa_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -157,7 +161,7 @@
 		4504067C21DF09130074DA52 /* BaseModel */ = {
 			isa = PBXGroup;
 			children = (
-				4504067D21DF09230074DA52 /* BaseModel.swift */,
+				4504067D21DF09230074DA52 /* JsonDataModel.swift */,
 			);
 			path = BaseModel;
 			sourceTree = "<group>";
@@ -405,6 +409,8 @@
 		4518204621DDE650006959C9 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				452096EC21E0F66200B9E115 /* MusicChannelDetailModel.swift */,
+				452096ED21E0F66200B9E115 /* SongListModel.swift */,
 				4518204721DDE650006959C9 /* JobModel.swift */,
 				4504067821DEF3A50074DA52 /* VerseModel.swift */,
 			);
@@ -721,6 +727,7 @@
 				4518206A21DDE650006959C9 /* JobSearchViewController.swift in Sources */,
 				4518204D21DDE650006959C9 /* SendRecuitDataManager.swift in Sources */,
 				4518206D21DDE650006959C9 /* JobModel.swift in Sources */,
+				452096EF21E0F66200B9E115 /* SongListModel.swift in Sources */,
 				4518204E21DDE650006959C9 /* RecruitViewController.swift in Sources */,
 				4518205421DDE650006959C9 /* CellFlowLayout.swift in Sources */,
 				4518206621DDE650006959C9 /* CitySelectorViewModel.swift in Sources */,
@@ -733,8 +740,9 @@
 				4518210A21DDEB66006959C9 /* DLUserDefaults.swift in Sources */,
 				4518205B21DDE650006959C9 /* DLMessageViewController.swift in Sources */,
 				4518206121DDE650006959C9 /* MeViewModel.swift in Sources */,
-				4504067E21DF09230074DA52 /* BaseModel.swift in Sources */,
+				4504067E21DF09230074DA52 /* JsonDataModel.swift in Sources */,
 				4518206921DDE650006959C9 /* CitySelectorViewController.swift in Sources */,
+				452096EE21E0F66200B9E115 /* MusicChannelDetailModel.swift in Sources */,
 				4518205521DDE650006959C9 /* CycleCell.swift in Sources */,
 				4518205D21DDE650006959C9 /* PendingViewController.swift in Sources */,
 				4518210E21DDEB66006959C9 /* Prefs.swift in Sources */,

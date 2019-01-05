@@ -11,6 +11,21 @@ import ObjectMapper
 
 public extension Response {
     
+    
+    /// 处理 json数据
+    public func mapJsonData<T: BaseMappable>(_ type: T.Type, context: MapContext? = nil) throws -> T {
+        
+        guard let json = try mapJSON() as? [String : Any] else {
+            throw MoyaError.jsonMapping(self)
+        }
+        guard let object = Mapper<T>(context: context).map(JSONObject: try mapJSON()) else {
+            //            throw MoyaError.requestMapping("请检查数据格式")
+            throw MoyaError.jsonMapping(self)
+        }
+        print(" API: \(String(describing: self.request))\n data:\(json)", color: .red);
+        return object
+    }
+    
     /// Maps data received from the signal into an object which implements the Mappable protocol.
     /// If the conversion fails, the signal errors.
     public func mapObject<T: BaseMappable>(_ type: T.Type, context: MapContext? = nil) throws -> T {

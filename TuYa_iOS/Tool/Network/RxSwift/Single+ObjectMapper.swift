@@ -13,6 +13,14 @@ import ObjectMapper
 /// Extension for processing Responses into Mappable objects through ObjectMapper
 public extension PrimitiveSequence where TraitType == SingleTrait, ElementType == Response {
     
+    
+    /// 处理 json数据 
+    public func mapJsonData<T: BaseMappable>(_ type: T.Type, context: MapContext? = nil) -> Single<T> {
+        return flatMap { response -> Single<T> in
+            return Single.just(try response.mapJsonData(type, context: context))
+        }
+    }
+    
     /// Maps data received from the signal into an object
     /// which implements the Mappable protocol and returns the result back
     /// If the conversion fails, the signal errors.

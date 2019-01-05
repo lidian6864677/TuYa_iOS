@@ -9,7 +9,7 @@
 import UIKit
 import ObjectMapper
 
-class BaseModel: Mappable {
+class JsonDataModel: Mappable {
     var code: Int = -1     /// 图片url
     var message: String = ""     /// 图片url
     var result: [String : Any]?     /// 图片url
