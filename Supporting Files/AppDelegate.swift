@@ -24,7 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         #endif
         
-        
+             
 //        UIApplication.shared.isStatusBarHidden = false
 //        UIApplication.shared.statusBarStyle = .lightContent
         
